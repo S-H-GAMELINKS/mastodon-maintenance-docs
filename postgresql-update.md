@@ -28,7 +28,7 @@ pg_dump --username=mastodon --no-owner mastodon > pgbuckup.`date +%Y%m%d_%H%M%S`
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 
 # リポジトリ署名キーをインポートします。
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key 追加 -
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
 # パッケージリストを更新します。
 sudo apt update
